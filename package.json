@@ -1,0 +1,17 @@
+{
+  "name": "media-viewer",
+  "version": "0.0.1-beta.0",
+  "main": "main.js",
+  "description": "A media viewer app built in Electron.",
+  "devDependencies": {
+    "electron": "^1.8.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levp/media-viewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/levp/media-viewer/issues"
+  },
+  "homepage": "https://github.com/levp/media-viewer#readme"
+}
