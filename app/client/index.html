@@ -3,13 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Title</title>
+
+	<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
 <main>
 	<input type="file" id="file-input">
-	<img alt="" src="" id="media-image">
-	<video src="" id="media-video" autoplay controls></video>
+
+	<section class="media-container">
+		<img alt="" src="" id="media-image" style="display: none;">
+		<video src="" id="media-video" style="display: none;" autoplay controls></video>
+	</section>
 </main>
 
 <script src="client.js"></script>

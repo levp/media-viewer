@@ -13,28 +13,57 @@ function main() {
 		const file = fileInput.files[0];
 
 		if (!file) {
-			console.log('No file selected.');
+			clearBoth();
 			return;
 		}
 
 		const filePath = file.path;
 
 		if (isImage(filePath)) {
-			// set image
-			mediaImage.src = filePath;
-			mediaVideo.src = '';
+			setImage(filePath);
 			return;
 		}
 
 		if (isVideo(filePath)) {
-			// set video
-			mediaImage.src = '';
-			mediaVideo.src = filePath;
+			setVideo(filePath);
 			return;
 		}
 
 		// TODO: Better error handling; let the user know!
-		console.error('Selected file name did not match any known image or video extensions.');
+		clearBoth();
+		console.error('Selected file name did not match any known image or video extensions:', filePath);
 	});
+
+	/////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////
+
+	function clearImage() {
+		mediaImage.src = '';
+		mediaImage.style.display = 'none';
+	}
+
+	function clearVideo() {
+		mediaVideo.src = '';
+		mediaVideo.style.display = 'none';
+	}
+
+	function setImage(filePath) {
+		clearVideo();
+		mediaImage.src = filePath;
+		mediaImage.style.display = '';
+	}
+
+	function setVideo(filePath) {
+		clearImage();
+		mediaVideo.src = filePath;
+		mediaVideo.style.display = '';
+	}
+
+	function clearBoth() {
+		clearImage();
+		clearVideo();
+	}
 }
+
+
 
