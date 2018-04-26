@@ -1,8 +1,11 @@
 {
   "name": "media-viewer",
   "version": "0.0.1-beta.0",
-  "main": "main.js",
+  "main": "./app/main.js",
   "description": "A media viewer app built in Electron.",
+  "scripts": {
+    "start": "electron app/main"
+  },
   "devDependencies": {
     "electron": "^1.8.4"
   },
